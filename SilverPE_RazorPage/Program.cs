@@ -10,6 +10,7 @@
             builder.Services.AddRazorPages();
             builder.Services.AddHttpClient();
             builder.Services.AddHttpContextAccessor();
+            builder.Services.AddMvc().AddRazorPagesOptions(options => options.Conventions.AddPageRoute("/Login/Index", ""));
 
             builder.Services.AddSession(options =>
             {
